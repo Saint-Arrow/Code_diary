@@ -1,0 +1,18 @@
+//https://blog.csdn.net/lyl278401555/article/details/50610790
+
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+
+        SharedPreferences pref = getSharedPreferences("data",MODE_PRIVATE);
+        week_flag= pref.getInt("week_flag", 0);
+        if(week_flag == 0){
+            Editor editor = pref.edit();
+            editor.putInt("week_flag", 1);
+            editor.commit();
+            week_flag=1;
+        }
+
+        SharedPreferences pref = getSharedPreferences("data",MODE_PRIVATE);
+        Editor editor = pref.edit();
+        editor.putInt("week_flag", week_flag);
+        editor.commit();

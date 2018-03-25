@@ -1,0 +1,45 @@
+//Button
+//https://blog.csdn.net/mashang123456789/article/details/72847429
+//https://zhidao.baidu.com/question/1511663032722176700.html
+//https://www.cnblogs.com/linzhichao86/p/3249540.htmlv
+
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+        //找到Button是为了设置点击事件
+        Button bt_callphone = (Button) findViewById(R.id.button);
+        //2.设置按钮的点击事件
+        //bt_callphone.setOnClickListener(new MyOnclickListener());
+        OnClickListener MyOnclickListener=new MyOnclickListener();
+        bt_callphone.setOnClickListener(MyOnclickListener);
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(MyOnclickListener);
+
+   class MyOnclickListener implements OnClickListener{
+        @Override
+        public void onClick(View v) {
+            //获取被点击按钮的id
+            int id = v.getId();
+            switch (id) {
+                case R.id.button:
+                    on_off();
+                    break;
+                case R.id.button2:
+                    resver();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+    private void on_off() {
+
+    }
+    private void resver() {
+
+    }
+
+    
+
