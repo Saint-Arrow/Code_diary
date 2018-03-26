@@ -1,0 +1,8 @@
+项目在自己机上展示JPG图片都是正常的，打包给客户机上始终不展示，试过很多方法，
+比如本机Debug下不管是运行工程文件还是直接运行 .exe文件 都是可以展示JPG图片的 ，
+而Release下 发现运行工程文件时 JPG文件也是可以展示的 但是直接运行 Release下exe文件 是不展示JPG文件的。
+
+1：在发布的文件夹下添加plugins文件夹
+2：复制QT的安装目录下的plugins文件夹下的imageformats文件夹到发布的文件夹下添加plugins文件夹下
+3：main.cpp添加 
+   QApplication::addLibraryPath("./plugins");

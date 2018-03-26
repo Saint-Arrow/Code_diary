@@ -1,0 +1,4 @@
+修改生成exe的名称方法：
+在项目的pro文件中修改如下
+TARGET = mod_web_tool   
+这样生成的EXE文件名字就是mod_web_tool.exe

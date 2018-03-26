@@ -1,0 +1,7 @@
+1:在项目文件夹目录下创建文件res.rc，把从网上down下来的叫做tubiao.ico的图标也Copy进来
+res.rc里面写上这么一段话：
+IDI_ICON1 ICON DISCARDABLE "tubiao.ico"  
+2:打开Qt Creator，把这两个文件导入到项目里面
+3:在项目的pro文件里面填上：
+RC_FILE += res.rc
+4:重新运行

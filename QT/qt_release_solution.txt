@@ -1,0 +1,13 @@
+http://blog.csdn.net/iw1210/article/details/51253458
+http://tieba.baidu.com/p/3730103947?qq-pf-to=pcqq.group
+Qt程序打包发布方法（使用官方提供的windeployqt工具）:
+
+1:将这个exe 复制到一个新的单独的文件夹里用于发布，比如存到 D:\hellomw\ 文件夹里面。
+2:然后从开始菜单打开 Qt 命令行，输入命令：cd /d D:\hellomw
+3:然后使用 windeployqt 工具命令：windeployqt hellomw.exe
+4:上面是最简单的程序发布，实际复杂程序可能还带一些图片文件、数据库文件、配置文件之类的，可以按自己需要添加这些文件到发布文件夹里面。
+
+
+mysql:
+驱动文件：libsql.dll
+将MySQL安装目录下的libmysql.dll拷贝到Qt安装目录下的bin目录中即可

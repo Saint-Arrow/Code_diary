@@ -1,0 +1,37 @@
+1:QT项目的pro文件中添加QT       += sql
+2：在QT安装目录中添加驱动文件：libsql.dll
+将MySQL安装目录下的libmysql.dll拷贝到Qt安装目录下的bin目录中即可
+发布的时候也要添加该驱动文件至发布文件夹下
+3： 连接数据库
+    QSqlDatabase    dbconn;
+    dbconn = QSqlDatabase::addDatabase("QMYSQL");
+    dbconn.setHostName(hostName);//主机名字
+    dbconn.setPort(3306);
+    dbconn.setDatabaseName(dbName);//数据库名字
+    dbconn.setUserName(m_strUserName); // 用户名
+    dbconn.setPassword(m_strPassword); // 密码
+    sql_ok = dbconn.open(); // 尝试连接数据库
+    if(sql_ok)
+    {
+        ui->textEdit->append("数据库连接OK");
+    }
+    else
+    {
+         ui->textEdit->append("数据库连接失败");
+    }
+4：查询
+    QSqlQuery query;
+    query.exec(search_cmd);
+    if(query.next())
+    {
+        QString firstname = query.value(0).toString();
+        firstname.append("---");
+        firstname.append(str);
+        ui->textEdit->append(firstname);
+    }
+    else
+    {
+        QString str_temp="无此灯具---";
+        str_temp.append(str);
+        ui->textEdit->append(str_temp);
+    }
