@@ -1,0 +1,5 @@
+https://www.2cto.com/kf/201706/649032.html
+
+在文件AndroidMainfest.xml中
+在activity android:name=".MainActivity"后
+添加android:screenOrientation="landscape"

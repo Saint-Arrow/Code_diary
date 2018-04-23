@@ -1,0 +1,5 @@
+cd /d E:\hellomw
+windeployqt 工具命令：
+windeployqt hellomw.exe
+
+从别处copy的工程要把pro.user文件删除，打开pro文件，出现选项选择NO，重新configure工程
